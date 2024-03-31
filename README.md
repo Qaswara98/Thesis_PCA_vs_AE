@@ -9,6 +9,8 @@
 - `Thesis_Intro_AE_vs_PCA.ipynb`: A comprehensive guide illustrating the comparison between AE and PCA methods. It provides a detailed walkthrough of their implementation, with a special focus on the extraction of significant features from both methods.
 
 - `GeneOverlapAnalysis.R`: A script designed to identify overlapping genes and subsequently perform a statistical analysis. The purpose of this analysis is to evaluate the significance of the overlap between genes.
+  
+- `GeneEnrichmentAnalysis.R`: This script performs Gene Ontology (GO) and Reactome pathway enrichment analysis on both the top 500 genes from PCA and the AE Model  
 
 - `AutoGeneReducer.py`: A script encapsulating the functionality of the AutoGeneReducer tool. It is designed to train models for dimensionality reduction on gene expression data and can be conveniently operated via the command line.
 
