@@ -37,3 +37,5 @@ For direct access to the dataset, please visit the [GEO database](https://www.nc
 - Matplotlib
 - scikit-learn
 - Keras
+
+## Installation Instructions
