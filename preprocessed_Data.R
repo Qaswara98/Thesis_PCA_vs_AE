@@ -5,10 +5,6 @@ library(dplyr)
 library(GEOquery)
 library(DESeq2)
 library(edgeR)
-library(pheatmap)
-library(clusterProfiler)
-library(org.Hs.eg.db)
-library(enrichplot)
 # Import the counts into a data frame
 countTable<- read.table("GSE216738_RAW_COUNTS_Abnormal-AML-50bp.txt", header = TRUE,as.is = TRUE,row.names = 1,sep="\t")
 
