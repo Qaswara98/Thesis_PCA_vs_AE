@@ -3,7 +3,7 @@ library(stats) # For the hypergeometric test
 library(VennDiagram) # For creating Venn diagrams
 
 # Set the working directory 
-# setwd("C:/Users/ABDULLAHI HAJI/OneDrive/Documents/Thesis_poject/GSE216738_RAW_COUNTS_Abnormal-AML-50bp")
+ setwd("C:/Users/ABDULLAHI HAJI/OneDrive/Documents/Thesis_poject/GSE216738_RAW_COUNTS_Abnormal-AML-50bp")
 
 # Read in normalized counts, top 500 genes from autoencoder and PCA
 normCounts <- read.csv("normCounts_res.CSV")
@@ -11,8 +11,8 @@ top500ae <- read.csv("top_500_genes_from_autoencoder.csv")
 top500pca <- read.csv("top_500_genes_from_PCA.csv")
 
 # Extract gene names from your datasets
-ae_genes <- as.character(top500ae$gene)
-pca_genes <- as.character(top500pca$gene)
+ae_genes <- as.character(top500ae$X)
+pca_genes <- as.character(top500pca$X)
 
 # The universe is the list of all genes in normCounts dataset
 universe_genes <- as.character(normCounts$X)
@@ -44,7 +44,7 @@ if (p_value < 0.05) {
 
 # Create the Venn diagram for the overlap genes 
 venn.plot <- venn.diagram(
-  x = list( AE= top500ae$gene, PCA = top500pca$gene),
+  x = list( AE= top500ae$X, PCA = top500pca$X),
   filename = NULL,
   fill = c("red", "blue"),
   alpha = 0.5,

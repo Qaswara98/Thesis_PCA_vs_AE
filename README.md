@@ -4,7 +4,7 @@
 
 ## Contents of this repository 
 
-- `preprocessed_Data.R`: A script for preprocessing the data, performed prior to training the model and implementing PCA.
+- `DataPreprocessing.R`: A script for preprocessing the data, performed prior to training the model and implementing PCA.
 
 - `Thesis_Intro_AE_vs_PCA.ipynb`: A comprehensive guide illustrating the comparison between AE and PCA methods. It provides a detailed walkthrough of their implementation, with a special focus on the extraction of significant features from both methods.
 
