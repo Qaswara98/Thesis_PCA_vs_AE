@@ -31,3 +31,9 @@ For direct access to the dataset, please visit the [GEO database](https://www.nc
 
 
 ## Dependencies
+- Python 3.6 or later
+- Pandas
+- Numpy
+- Matplotlib
+- scikit-learn
+- Keras
