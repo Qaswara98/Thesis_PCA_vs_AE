@@ -20,6 +20,8 @@ For a quick start, it is recommended to first visit the ‘INTRODUCTION’ secti
 
 ## Get Data
 
-The dataset used for this project is accessible for download from the Expression Omnibus (GEO) database, under the identifier GSE216738.
+The dataset used for this project is sourced from the Gene Expression Omnibus (GEO) database. It is identifiable under the accession number `GSE216738`. The specific file used for the analysis is `GSE216738_RAW_COUNTS_Abnormal-AML-50bp.txt.gz`.
+
+For direct access to the dataset, please visit the [GEO database](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216738).
 
 # Introduction
