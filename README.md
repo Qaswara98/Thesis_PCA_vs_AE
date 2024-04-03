@@ -27,7 +27,7 @@ For direct access to the dataset, please visit the [GEO database](https://www.nc
 # Introduction
 
 
-
+## Features
 
 
 ## Dependencies
@@ -36,6 +36,23 @@ For direct access to the dataset, please visit the [GEO database](https://www.nc
 - Numpy
 - Matplotlib
 - scikit-learn
+- tensorflow
 - Keras
 
 ## Installation Instructions
+You have several options to get started with the AutoGeneReducer tool:
+
+1. **Clone the Repository**: You can clone the repository to your local machine. This gives you access to all the necessary files. Use the following command to clone the repository:
+
+```bash
+git clone git@github.com:Qaswara98/Thesis_PCA_vs_AE.git
+```
+
+2. **Download the Script**: Alternatively, you can specifically download the `AutoGeneReducer.py` script from the repository. Please ensure that all dependencies are installed before running the script. The required dependencies are listed in the section above.
+
+3. **Use the Docker Image**: For a hassle-free setup and execution, we provide a Docker image. This image comes with a pre-configured environment and all the dependencies required by the AutoGeneReducer tool, ensuring a consistent runtime across different platforms. You can download the Docker image using the following command:
+
+```sh
+docker pull qaswara98/ubuntu:AutoGeneReducer
+```
+## Usage
