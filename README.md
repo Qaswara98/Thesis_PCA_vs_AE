@@ -18,7 +18,7 @@
 
 For a quick start, it is recommended to first visit the ‘INTRODUCTION’ section to gain an understanding of the project. Following this, proceed to the ‘Installation Instructions’ section, where detailed instructions are provided for a smooth installation of the Tool on your system. Upon successful installation, navigate to the ‘USE’ section. This section offers a succinct tutorial on the basic operations and functionalities of the Tool, enabling immediate and effective usage.
 # Introduction
-
+Soon to be updated ....
 
 ## Get Data
 
@@ -26,7 +26,7 @@ The dataset used for this project is sourced from the Gene Expression Omnibus (G
 
 For direct access to the dataset, please visit the [GEO database](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216738).
 # Reproducibility of the Results
-
+Soon to be updated ....
 
 # AutoGeneReducer tool
 
@@ -117,7 +117,5 @@ Please replace /path/to/your/host/data and /data/in/container with your actual p
 
 - **File Format Error**: Ensure your file is correctly formatted. The script only accepts CSV, XLS, or XLSX files.
 - **Dependency Errors**: Verify all required Python libraries are installed.
-- **Model Performance**: If the model performance is not satisfactory, consider adjusting the hyperparameters such as `
-
---latent_dim`, `--epochs`, or `--batch_size`.
+- **Model Performance**: If the model performance is not satisfactory, consider adjusting the hyperparameters such as  `--latent_dim`, `--epochs`, or `--batch_size`.
 
