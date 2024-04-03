@@ -29,7 +29,11 @@ For direct access to the dataset, please visit the [GEO database](https://www.nc
 
 
 ## Features
-
+- **Support for Various File Formats**: The tool can process data in CSV, XLS, or XLSX format.
+- **Customizable Model Architecture**: Users can adjust the depth, width, and dropout rate of the neural network.
+- **Visualization Tools**: The tool provides the ability to plot training loss and reconstruction error histograms, helping users evaluate model performance.
+- **Flexible Data Handling**: The tool can work with separate training and validation datasets.
+- **Optional Pre-trained Model Loading**: The tool supports loading a pre-trained model from a specified file path. This allows for model reusability and fine-tuning on new data without starting from scratch.
 
 ## Dependencies
 - Python 3.6 or later
@@ -94,4 +98,11 @@ You can execute the script with all arguments as shown below:
 python AutoGeneReducer.py --data_filepath /path/to/data.csv --val_data_filepath /path/to/validation_data.csv --model_path /path/to/model.keras --latent_dim 20 --depth 2 --first_layer_size 500 --dropout_rate 0.1 --epochs 200 --batch_size 80 --activation relu --test_size 0.25 --shuffle True --plot_loss --plot_reconstruction_error
 ```
 ## Running the AutoGeneReducer Tool Using Docker
+### Data Preparation
+Please make sure that your training files are either in the working directory or a specified directory on your host system. To make these files accessible to AutoGeneReducer, you'll need to mount this directory to the Docker container.
 
+```sh
+docker run -v /path/to/your/host/data:/data/in/container qaswara98/ubuntu:AutoGeneReducer python3 AutoGeneReducer.py --data_filepath /data/in/container/data.csv --val_data_filepath /data/in/container/validation_data.csv --model_path /data/in/container/model.keras --latent_dim 20 --depth 2 --first_layer_size 500 --dropout_rate 0.1 --epochs 200 --batch_size 80 --activation relu --test_size 0.25 --shuffle True --plot_loss --plot_reconstruction_error
+```
+> # Note
+Please replace /path/to/your/host/data and /data/in/container with your actual paths. Also, ensure that the Docker image qaswara98/ubuntu:AutoGeneReducer is available on your system or Docker Hub. 
