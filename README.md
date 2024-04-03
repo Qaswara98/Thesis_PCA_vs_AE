@@ -56,3 +56,21 @@ git clone git@github.com:Qaswara98/Thesis_PCA_vs_AE.git
 docker pull qaswara98/ubuntu:AutoGeneReducer
 ```
 ## Usage
+
+## Arguments
+- `data_filepath`: This is the path to the data file you want to use. The data file should be in CSV, XLS, or XLSX format.
+- `val_data_filepath`: This is an optional argument. If you have a separate validation data file, you can specify the path here. If not provided, the script will split the training data into training and validation sets.
+- `model_path`: This is an optional argument. If you have a pre-trained model that you want to load, you can specify the path here.
+- `latent_dim`: This is the dimension of the latent space of the autoencoder. The default value is 20.
+- `depth`: This is the depth of the neural network, i.e., the number of layers. The default value is 2.
+- `first_layer_size`: This is the size of the first layer of the neural network. The default value is 500.
+- `dropout_rate`: This is the dropout rate for training the neural network. The default value is 0.1.
+- `epochs`: This is the number of epochs for training the model. The default value is 200.
+- `batch_size`: This is the batch size for training the model. The default value is 80.
+- `activation`: This is the activation function for the neural network layers. The default value is 'relu'.
+- `test_size`: This is the proportion of the dataset to include in the test split. The default value is 0.25.
+- `shuffle`: This determines whether to shuffle the training data before each epoch. The default value is True.
+- `plot_loss`: If this argument is included, the script will plot the loss curves after training.
+- `plot_reconstruction_error`: If this argument is included, the script will plot the reconstruction error histogram after training.
+
+### Running the Script
