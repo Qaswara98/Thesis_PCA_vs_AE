@@ -25,7 +25,10 @@ For a quick start, it is recommended to first visit the ‘INTRODUCTION’ secti
 The dataset used for this project is sourced from the Gene Expression Omnibus (GEO) database. It is identifiable under the accession number `GSE216738`. The specific file used for the analysis is `GSE216738_RAW_COUNTS_Abnormal-AML-50bp.txt.gz`.
 
 For direct access to the dataset, please visit the [GEO database](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216738).
+# Reproducibility of the Results
 
+
+# AutoGeneReducer tool
 
 
 ## Features
@@ -97,6 +100,9 @@ You can execute the script with all arguments as shown below:
 ```bash
 python AutoGeneReducer.py --data_filepath /path/to/data.csv --val_data_filepath /path/to/validation_data.csv --model_path /path/to/model.keras --latent_dim 20 --depth 2 --first_layer_size 500 --dropout_rate 0.1 --epochs 200 --batch_size 80 --activation relu --test_size 0.25 --shuffle True --plot_loss --plot_reconstruction_error
 ```
+> # Note
+Please replace `/path/to/data.csv`, `/path/to/validation_data.csv`, and `/path/to/model.keras` with the actual paths to your files. If you want to use the default values for any of the optional arguments, you can simply omit them from the command.
+
 ## Running the AutoGeneReducer Tool Using Docker
 ### Data Preparation
 Please make sure that your training files are either in the working directory or a specified directory on your host system. To make these files accessible to AutoGeneReducer, you'll need to mount this directory to the Docker container.
@@ -106,3 +112,12 @@ docker run -v /path/to/your/host/data:/data/in/container qaswara98/ubuntu:AutoGe
 ```
 > # Note
 Please replace /path/to/your/host/data and /data/in/container with your actual paths. Also, ensure that the Docker image qaswara98/ubuntu:AutoGeneReducer is available on your system or Docker Hub. 
+
+## Troubleshooting
+
+- **File Format Error**: Ensure your file is correctly formatted. The script only accepts CSV, XLS, or XLSX files.
+- **Dependency Errors**: Verify all required Python libraries are installed.
+- **Model Performance**: If the model performance is not satisfactory, consider adjusting the hyperparameters such as `
+
+--latent_dim`, `--epochs`, or `--batch_size`.
+
