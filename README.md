@@ -16,7 +16,9 @@
 
 ## Getting Started
 
-For a quick start, it is recommended to first visit the ‘INTRODUCTION’ section to gain an understanding of the project. Following this, proceed to the ‘INSTALL’ section, where detailed instructions are provided for a smooth installation of the Tool on your system. Upon successful installation, navigate to the ‘USE’ section. This section offers a succinct tutorial on the basic operations and functionalities of the Tool, enabling immediate and effective usage.
+For a quick start, it is recommended to first visit the ‘INTRODUCTION’ section to gain an understanding of the project. Following this, proceed to the ‘Installation Instructions’ section, where detailed instructions are provided for a smooth installation of the Tool on your system. Upon successful installation, navigate to the ‘USE’ section. This section offers a succinct tutorial on the basic operations and functionalities of the Tool, enabling immediate and effective usage.
+# Introduction
+
 
 ## Get Data
 
@@ -24,7 +26,6 @@ The dataset used for this project is sourced from the Gene Expression Omnibus (G
 
 For direct access to the dataset, please visit the [GEO database](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216738).
 
-# Introduction
 
 
 ## Features
@@ -56,7 +57,10 @@ git clone git@github.com:Qaswara98/Thesis_PCA_vs_AE.git
 docker pull qaswara98/ubuntu:AutoGeneReducer
 ```
 ## Usage
-
+The script is executed from the command line with the following syntax:
+```bash
+python AutoGeneReducer.py [arguments]
+```
 ## Arguments
 - `data_filepath`: This is the path to the data file you want to use. The data file should be in CSV, XLS, or XLSX format.
 - `val_data_filepath`: This is an optional argument. If you have a separate validation data file, you can specify the path here. If not provided, the script will split the training data into training and validation sets.
@@ -74,3 +78,20 @@ docker pull qaswara98/ubuntu:AutoGeneReducer
 - `plot_reconstruction_error`: If this argument is included, the script will plot the reconstruction error histogram after training.
 
 ### Running the Script
+In this section, you'll find examples demonstrating how to execute the script with various arguments.
+### Basic Command
+Run the script with minimal setup using the command below. This will run the script with all default parameters:
+```bash
+python AutoGeneReducer.py path/to/your/data.csv
+```
+### Advanced Options
+Customize the script's behavior using various options. For example:
+```bash
+python AutoGeneReducer.py data.csv --latent_dim 32 --epochs 150 --plot_loss
+```
+You can execute the script with all arguments as shown below:
+```bash
+python AutoGeneReducer.py --data_filepath /path/to/data.csv --val_data_filepath /path/to/validation_data.csv --model_path /path/to/model.keras --latent_dim 20 --depth 2 --first_layer_size 500 --dropout_rate 0.1 --epochs 200 --batch_size 80 --activation relu --test_size 0.25 --shuffle True --plot_loss --plot_reconstruction_error
+```
+## Running the AutoGeneReducer Tool Using Docker
+
