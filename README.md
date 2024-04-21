@@ -119,7 +119,7 @@ Please replace /path/to/your/host/data and /data/in/container with your actual p
 - **Dependency Errors**: Verify all required Python libraries are installed.
 - **Model Performance**: If the model performance is not satisfactory, consider adjusting the hyperparameters such as  `--latent_dim`, `--epochs`, or `--batch_size`.
 
-## Licensing
+## License
 
 See the [LICENSE](LICENSE) file for the project's licensing. 
 
