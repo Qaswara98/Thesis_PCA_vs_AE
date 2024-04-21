@@ -121,5 +121,5 @@ Please replace /path/to/your/host/data and /data/in/container with your actual p
 
 ## License
 
-See the [LICENSE](LICENSE) file for the project's licensing. 
+The project is released under the GPL-3.0 license. For more details on the licensing, please See the [LICENSE](LICENSE) file. 
 
