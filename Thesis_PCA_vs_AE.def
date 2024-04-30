@@ -56,13 +56,3 @@ From: ubuntu:latest
 
     # Set PATH to use the virtual environment
     export PATH="/opt/venv/bin:$PATH"
-
-    #Install Java
-    apt-get install -y openjdk-17-jre-headless default-jre
-
-    #Install Nextflow
-    curl -s https://get.nextflow.io | bash
-    mv nextflow /bin
-
-    #Install git
-    apt-get install -y git
