@@ -4,7 +4,6 @@ From: ubuntu:latest
 %post
     #Set time zone and set apt-get to non-interactive
     export TZ=Europe DEBIAN_FRONTEND=noninteractive
-
     #Set work directory
     cd /root
 
@@ -68,23 +67,3 @@ From: ubuntu:latest
 
     #Install git
     apt-get install -y git
-
-    #Install singularity
-    export VERSION=1.18 OS=linux ARCH=amd64 && \
-            wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
-            tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz && \
-            rm go$VERSION.$OS-$ARCH.tar.gz
-    mkdir go && \
-            echo 'export GOPATH=${HOME}/go' >> ~/.bashrc && \
-            echo 'export PATH=/usr/local/go/bin:${PATH}' >> ~/.bashrc
-    source ~/.bashrc
-    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.43.0
-    export VERSION=ce-3.9.6 && export VERPATH=3.9.6 && export PATH=/usr/local/go/bin:${PATH} && \
-            mkdir -p $GOPATH/src/github.com/sylabs && \
-            cd $GOPATH/src/github.com/sylabs && \
-            wget https://github.com/sylabs/singularity/releases/download/v${VERPATH}/singularity-${VERSION}.tar.gz && \
-            tar -xzf singularity-${VERSION}.tar.gz && \
-            cd ./singularity-${VERSION} && \
-            ./mconfig && \
-            cd builddir && \
-            make && \
