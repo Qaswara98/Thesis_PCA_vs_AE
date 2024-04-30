@@ -2,9 +2,6 @@ Bootstrap: docker
 From: ubuntu:latest
 
 %post
-    #Set Bash as the shell to use
-    SHELL ["/bin/bash", "-c"]
-
     #Set time zone and set apt-get to non-interactive
     export TZ=Europe DEBIAN_FRONTEND=noninteractive
 
