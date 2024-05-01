@@ -1,13 +1,14 @@
 #!/usr/bin/env nextflow
 
-params.inputFile = "" // default input file
+params.input = "" // default input file
 params.outdir = "Thesis_PCA_vs_AE"
+inputFile = Channel.fromPath(params.input)
 
 process DataPreprocessing {
     publishDir "${params.outdir}/DataPreprocessing", mode: 'copy'
 
     input:
-    path inputFile from params.inputFile
+    path inputFile
 
     output:
     path 'normCounts_res.CSV'
@@ -806,7 +807,8 @@ process GOPathwayAnalysis {
 
 
 workflow {
-    DataPreprocessing(params.inputFile)
+    inputFile = Channel.fromPath(params.input)
+    DataPreprocessing(inputFile)
     AutoencoderTraining(DataPreprocessing.out)
     IdentifyTopGenes(AutoencoderTraining.out[1])
     PCAAnalysis(DataPreprocessing.out)
