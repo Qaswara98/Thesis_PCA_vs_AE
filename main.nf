@@ -47,7 +47,7 @@ process DataPreprocessing {
     head(gene_data)
 
     # Count the number of each gene biotype
-    gene_counts <- table(gene_data$$gene_biotype)
+    gene_counts <- table(gene_data$$ gene_biotype)
     print(gene_counts)
 
     # Define the gene biotypes to be filtered out
