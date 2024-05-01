@@ -58,7 +58,7 @@ process DataPreprocessing {
                           "rRNA_pseudogene", "rRNA", "Mt_rRNA", "Mt_tRNA", "snRNA", "snoRNA", "misc_RNA","transcribed_unitary_pseudogene","IG_pseudogene")
 
     # Get the gene biotypes from  gene data
-    gene_biotypes <- gene_data$$gene_biotype
+    gene_biotypes <- gene_data$$ gene_biotype
 
     # Filter out the specified gene biotypes
     filtered_gene_data <- gene_data[!gene_biotypes %in% filter_biotypes, ]
@@ -67,7 +67,7 @@ process DataPreprocessing {
     counts_filtered <- counts[rownames(counts) %in% filtered_gene_data$ensembl_gene_id, ]
     dim(counts_filtered )
     # Get the unique biotypes in the filtered data
-    remaining_biotypes <- unique(filtered_gene_data$$gene_biotype)
+    remaining_biotypes <- unique(filtered_gene_data$$ gene_biotype)
     print(remaining_biotypes)
     # Print the remaining biotypes
     #print(paste("The remaining biotypes after filtering are: ", 
