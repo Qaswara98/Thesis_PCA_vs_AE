@@ -10,7 +10,7 @@
 
 - `GeneOverlapAnalysis.R`: A script designed to identify overlapping genes and subsequently perform a statistical analysis. The purpose of this analysis is to evaluate the significance of the overlap between genes.
   
-- `Annotation Enrichment Analysis.R`: This script performs Gene Ontology (GO) and Reactome pathway enrichment analysis on both the top 500 genes from PCA and the AE Model  
+- `Annotation Enrichment Analysis.R`: This script performs Gene Ontology (GO) and Reactome pathway enrichment analysis on both the top 3000 genes from PCA and the AE Model  
 
 - `AutoGeneReducer.py`: A script encapsulating the functionality of the AutoGeneReducer tool. It is designed to train models for dimensionality reduction on gene expression data and can be conveniently operated via the command line.
 
