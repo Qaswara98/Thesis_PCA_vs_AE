@@ -118,7 +118,7 @@ Please replace /path/to/your/host/data and /data/in/container with your actual p
 - **File Format Error**: Ensure your file is correctly formatted. The script only accepts CSV, XLS, or XLSX files.
 - **Dependency Errors**: Verify all required Python libraries are installed.
 - **Model Performance**: If the model performance is not satisfactory, consider adjusting the hyperparameters such as  `--latent_dim`, `
--  --epochs`, or `--batch_size`.
+  --epochs`, or `--batch_size`.
 
 ## License
 
