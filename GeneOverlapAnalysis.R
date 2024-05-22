@@ -7,12 +7,12 @@ library(VennDiagram) # For creating Venn diagrams
 
 
  
- # Read in normalized counts, top 500 genes from autoencoder and PCA
+ # Read in normalized counts, top 3000 genes from autoencoder and PCA
 normCounts <- read.csv("normCounts_res.CSV")
 top3000ae <- read.csv("top_3000_genes_from_autoencoder.csv")
 top3000pca <- read.csv("top_3000_genes_from_PCA.csv")
 
-# Extract gene names from your datasets
+# Extract gene names from the datasets
 ae_genes <- as.character(top3000ae$X)
 pca_genes <- as.character(top3000pca$X)
 
