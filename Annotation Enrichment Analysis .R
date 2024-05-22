@@ -14,6 +14,7 @@ setwd("C:/Users/ABDULLAHI HAJI")
 
 # Read the files containing the top 3000 genes from autoencoder and PCA
 genes_autoencoder <- read.csv("top_3000_genes_from_autoencoder.csv")
+
 genes_pca <- read.csv("top_3000_genes_from_pca.csv")
 
 # Prepare the gene lists
@@ -50,14 +51,14 @@ perform_go_analysis <- function(converted_gene_ids) {
                                     qvalueCutoff = 0.05,
                                     readable     = TRUE)
   return(go_enrichment_results)
-  print(head(go_enrichment_results@result))
+  print(head(g_enrichment_results@result,n=100))
 }
 
 # Function to visualize GO analysis results
 visualize_go_analysis <- function(go_enrichment_results, converted_gene_ids) {
   # View the results
   head(go_enrichment_results)
-  print(head(go_enrichment_results@result))
+  print(head(go_enrichment_results@result, n=100))
   
   # Visualize the results
   print(barplot(go_enrichment_results, showCategory=20, font.size = 10) + ggtitle("Barplot for the Biological Process (GO) Using an PCA Gene List") +
@@ -160,3 +161,20 @@ kegg_pca <- perform_kegg_analysis(converted_gene_ids_pca)
 # Visualize KEGG analysis results for both gene lists
 visualize_kegg_analysis(kegg_autoencoder, gene_ids_autoencoder)
 visualize_kegg_analysis(kegg_pca, gene_ids_pca)
+
+# check the the intersect between GO terms of PCA and AE 
+intersect_GO_terms<-intersect(go_enrichment_results_autoencoder@result$ID[1:1000],go_enrichment_results_pca@result$ID[1:1000])
+length(intersect_GO_terms)
+print(intersect_GO_terms)
+View(go_enrichment_results_autoencoder)
+View(go_enrichment_results_pca)
+
+
+# check the the intersect between GO terms of PCA and AE 
+intersect_kegg_terms<-intersect(kegg_autoencoder@result$ID[1:100],kegg_pca@result$ID[1:100])
+length(intersect_kegg_terms)
+print(intersect_kegg_terms)
+
+View(kegg_autoencoder)
+View(kegg_pca)
+
