@@ -17,8 +17,28 @@
 ## Getting Started
 
 For a quick start, it is recommended to first visit the ‘INTRODUCTION’ section to gain an understanding of the project. Following this, proceed to the ‘Installation Instructions’ section, where detailed instructions are provided for a smooth installation of the Tool on your system. Upon successful installation, navigate to the ‘USE’ section. This section offers a succinct tutorial on the basic operations and functionalities of the Tool, enabling immediate and effective usage.
+Sure, here's your introduction in markdown format:
+
+
 # Introduction
-Soon to be updated ....
+The study of gene expression (GE) data is pivotal for understanding how genetic information is transcribed. This understanding can reveal insights into disease mechanisms, improve diagnostics, and guide the development of targeted therapies. However, the high dimensionality of GE data poses significant challenges.
+
+## Dimensionality Reduction Techniques
+To address these challenges, dimensionality reduction (DR) techniques are employed. DR techniques reduce computational complexity and simplify data processing. They encompass two main techniques: feature selection and feature engineering. Feature selection identifies the most informative features from the original dataset, while feature engineering derives new features using linear or non-linear methods. These new features are lower-dimensional, meaning they reduce the number of features (variables), but the number of samples (observations) remains the same.
+
+## Autoencoders in Omics Research
+Recently, autoencoders (AEs) have been used to reduce GE data dimensionality in omics research. This study aimed to develop an AE model for GE data dimensionality reduction and compare its feature weighting with Principal Component Analysis (PCA). A secondary aim was to create an AE tool with a command-line interface (CLI) for processing high-dimensional data.
+
+## Comparative Analysis
+This study compared key features selected by PCA and AE, focusing on their similarities or differences and the influence of their weightings on data interpretation. An enrichment analysis based on Gene Ontology (GO) terms was used to compare the biological functions of genes identified by PCA and AE. A hypergeometric test assessed the overlap between feature sets selected by PCA and AE. Network analysis provided a comprehensive comparison of genes identified by both methods and identified hub genes.
+
+## Predictive Potential
+Lastly, the study assessed the predictive potential of reduced datasets by PCA and AE to determine which method better preserves the original data's information.
+
+## Results and Future Work
+The study has provided insights into the similarities and differences between PCA and AE, highlighting their distinct capabilities and applications. It reveals that PCA and AE select and prioritise features differently, with each method capturing unique aspects of the data. Despite these differences, both methods consistently identify similar biological processes and functions, as evidenced by GO terms and KEGG pathway analysis. Interestingly, when comparing which reduced data retained the most information from the original data, the PCA and AE reduced data showed almost identical outputs.
+
+The tool developed, named **AutoGeneReducer**, can be used to reduce high-dimensional data in GE analysis. Future work will explore more DR techniques like t-SNE, UMAP, and Variational Autoencoders (VAEs) to enhance the understanding of complex dataset structures while further advancing the AutoGeneReducer tool.
 
 ## Get Data
 
