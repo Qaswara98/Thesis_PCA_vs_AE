@@ -26,7 +26,7 @@ def load_data(filepath):
     Example:
     >>> data = load_data('gene_expression.csv')
     This will load a CSV file containing gene expression data into a DataFrame, assuming the first
-    column is an index column which containes the gene names/Ids.
+    column is an index column which contains the gene names/Ids.
     
     """
     _, file_extension = os.path.splitext(filepath)
